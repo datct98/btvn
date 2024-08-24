@@ -1,6 +1,6 @@
-package extend_lesson.buoi7.techmaster;
+package extend_lesson.buoi7.techmaster_v2.entities;
 
-public class ItStudent extends TechmasterStudent{
+public class ItStudent extends TechmasterStudent {
     private double html;
     private double css;
     private double java;
@@ -29,7 +29,10 @@ public class ItStudent extends TechmasterStudent{
         this.java = java;
     }
 
-    public ItStudent(double html, double css, double java) {
+
+
+    public ItStudent(String fullName, String major, double html, double css, double java) {
+        super(fullName, major);
         this.html = html;
         this.css = css;
         this.java = java;

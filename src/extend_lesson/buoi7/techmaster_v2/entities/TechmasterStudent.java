@@ -1,8 +1,13 @@
-package extend_lesson.buoi7.techmaster;
+package extend_lesson.buoi7.techmaster_v2.entities;
 
 public  abstract class TechmasterStudent {
     private String fullName;
     private String major;
+
+    public TechmasterStudent(String fullName, String major) {
+        this.fullName = fullName;
+        this.major = major;
+    }
 
     public abstract double getPoint();
     public String classify(){

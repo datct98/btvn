@@ -1,10 +1,14 @@
-package extend_lesson.buoi7.techmaster;
+package extend_lesson.buoi7.techmaster_v2.entities;
 
-public class BizStudent extends TechmasterStudent{
+public class BizStudent extends TechmasterStudent {
+    private static int autoId;
+    private int id;
     private double marketing;
     private double sales;
 
-    public BizStudent(double marketing, double sales) {
+    public BizStudent(String fullName, String major, double marketing, double sales) {
+        super(fullName, major);
+        this.id = ++autoId;
         this.marketing = marketing;
         this.sales = sales;
     }
@@ -30,4 +34,12 @@ public class BizStudent extends TechmasterStudent{
         return (2*marketing + sales)/3;
     }
 
+    @Override
+    public String toString() {
+        return "BizStudent{" +
+                "id=" + id +
+                ", marketing=" + marketing +
+                ", sales=" + sales +
+                '}';
+    }
 }
