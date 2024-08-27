@@ -1,5 +1,6 @@
 package extend_lesson.buoi8.lab1.service;
 
+import extend_lesson.buoi8.lab1.entities.Family;
 import extend_lesson.buoi8.lab1.entities.Member;
 
 import java.util.ArrayList;
@@ -24,13 +25,4 @@ public class MemberService {
         return members;
     }
 
-    public ArrayList<Member> inputMembers(Scanner sc, ArrayList<Member> members, int n){
-        for (int i = 0; i < n; i++) {
-            System.out.println("Mời b nhập tên: ");
-            String name = sc.nextLine();
-            Member member = new Member(name);
-            members.add(member);
-        }
-        return members;
-    }
 }
