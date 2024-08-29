@@ -18,4 +18,8 @@ public class TechmasterService {
         Classroom classroom = classService.insertClass(scanner, students);
         return new TechMaster(manager, teacher, classroom);
     }
+
+    public void printInfo(TechMaster techMaster){
+        System.out.println(techMaster);
+    }
 }
