@@ -37,6 +37,7 @@ public class Menu {
                     students.add(student);
                     break;
                 case 3:
+                    studentService.updateStudent(scanner, students);
                     break;
                 case 4:
                     break;
