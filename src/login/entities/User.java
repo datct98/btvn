@@ -1,29 +1,23 @@
-package extend_lesson.midterm.entities;
+package login.entities;
+
+import login.enums.Role;
 
 public class User {
     private String username;
     private String password;
+    private Role role;
     private String email;
-    private int role;
 
-
-    public int getRole() {
-        return role;
-    }
-
-    public void setRole(int role) {
-        this.role = role;
-    }
-
-    public User(String username, String password, int role) {
+    public User(String username, String password, Role role) {
         this.username = username;
         this.password = password;
         this.role = role;
     }
 
-    public User(String username, String password, String email) {
+    public User(String username, String password, Role role, String email) {
         this.username = username;
         this.password = password;
+        this.role = role;
         this.email = email;
     }
 
@@ -43,11 +37,11 @@ public class User {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    public Role getRole() {
+        return role;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

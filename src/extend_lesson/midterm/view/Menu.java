@@ -2,6 +2,7 @@ package extend_lesson.midterm.view;
 
 import extend_lesson.midterm.entities.User;
 import extend_lesson.midterm.service.UserService;
+import extend_lesson.midterm.utils.Constant;
 
 import java.util.Scanner;
 
@@ -63,6 +64,13 @@ public class Menu {
             case 2:
                 break;
         }
+    }
+
+    public void menuForAdmin(){
+
+    }
+    public void menuForCustomer(){
+
     }
 
 
