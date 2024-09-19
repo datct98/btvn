@@ -14,6 +14,7 @@ public class Menu {
         System.out.println("2- Xem chi tiết sản phẩm");
         System.out.println("3- Thêm sản phẩm");
         System.out.println("4- Xóa sản phẩm");
+        System.out.println("5- Filter");
         System.out.println("Mời bạn lựa chọn: ");
         chooseMenuSeller(scanner);
     }
@@ -35,6 +36,33 @@ public class Menu {
                 break;
             default:
                 System.exit(0);
+        }
+    }
+
+    public void menuFilter(Scanner scanner){
+        System.out.println("1- Lọc theo Khu vực");
+        System.out.println("2- Lọc theo giá sp:");
+        System.out.println("Mời bạn lựa chọn: ");
+        chooseMenuFilter(scanner);
+    }
+
+    private void chooseMenuFilter(Scanner scanner) {
+        int choose = Utils.inputInteger(scanner);
+        switch (choose){
+            case 1:
+                System.out.println("MỜi bạn chọn khu vực: 1- HN  2- HCM");
+                int area = Utils.inputInteger(scanner);
+                if(area == 1){
+
+                } else if(area == 2){
+
+                } else {
+
+                }
+                break;
+            case 2:
+                break;
+            default:
         }
     }
 }
