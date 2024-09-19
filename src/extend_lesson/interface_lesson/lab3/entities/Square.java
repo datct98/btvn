@@ -13,9 +13,5 @@ public class Square {
         this.side = side;
     }
 
-    @Override
-    public void display() {
-
-    }
 
 }
