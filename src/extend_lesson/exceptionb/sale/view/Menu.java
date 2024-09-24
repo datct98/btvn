@@ -34,6 +34,9 @@ public class Menu {
                 break;
             case 4:
                 break;
+            case 5:
+                menuFilter(scanner);
+                break;
             default:
                 System.exit(0);
         }
@@ -53,7 +56,7 @@ public class Menu {
                 System.out.println("MỜi bạn chọn khu vực: 1- HN  2- HCM");
                 int area = Utils.inputInteger(scanner);
                 if(area == 1){
-
+                    productService.filterProduct();
                 } else if(area == 2){
 
                 } else {

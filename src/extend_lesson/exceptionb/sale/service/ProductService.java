@@ -26,7 +26,7 @@ public class ProductService {
         // Sử dụng tham số để giúp tái sử dụng hàm
         List<Product> productHNs = new ArrayList<>();
         for (Product product: DataBase.products){
-            if(product.getArea().equalsIgnoreCase("HN")){
+            if("HN".equalsIgnoreCase(product.getArea())){
                 productHNs.add(product);
             }
         }
