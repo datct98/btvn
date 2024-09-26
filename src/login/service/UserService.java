@@ -51,9 +51,17 @@ public class UserService {
         // TODO validate
         System.out.println("Mời b nhập email");
         String email = scanner.nextLine();
+        System.out.println("Mời b chọn role: 1- Người bán  2- Người mua");
+        int roleSelect = Integer.parseInt(scanner.nextLine());
+        Role role;
+        if(roleSelect == 1){
+            role = Role.SELLER;
+        } else {
+            role = Role.CUSTOMER;
+        }
 
         // Khi đăng ký, mặc định account là role customer
-        User user = new User(username, password, Role.CUSTOMER, email);
+        User user = new User(username, password, role, email);
         Database.users.add(user);
         System.out.println("Đăng ký thành công");
         return true;

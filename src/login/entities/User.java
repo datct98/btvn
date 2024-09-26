@@ -5,7 +5,7 @@ import login.enums.Role;
 public class User {
     private String username;
     private String password;
-    private Role role;
+    private Role role;// nó là ai
     private String email;
 
     public User(String username, String password, Role role) {
