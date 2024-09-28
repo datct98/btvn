@@ -5,7 +5,7 @@ import extend_lesson.manage_book.entities.Person;
 
 import java.util.Scanner;
 
-public class PersonService implements IActionCommon, IActionCommon2<Person>{
+public class PersonService implements IActionCommon{
 
     public Person findById(int id){
         for (Person person: Database.people){
@@ -23,22 +23,6 @@ public class PersonService implements IActionCommon, IActionCommon2<Person>{
         String phone =scanner.nextLine();
         Person person = new Person(name, phone);
         Database.people.add(person);
-    }
-
-
-
-    private Person inputInfo(Scanner scanner){
-        System.out.println("Mời b nhập tên độc giả: ");
-        String name =scanner.nextLine();
-        String phone =scanner.nextLine();
-        Person person = new Person(name, phone);
-        return person;
-    }
-
-
-    @Override
-    public void insert(Person object) {
-        Database.people.add(object);
     }
 
 

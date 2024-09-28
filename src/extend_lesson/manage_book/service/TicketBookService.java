@@ -8,7 +8,7 @@ import extend_lesson.manage_book.utils.Utils;
 import java.util.Scanner;
 
 public class TicketBookService {
-    BookService bookService = new BookService();
+    BookService bookService = BookService.getInstance();
     PersonService personService = new PersonService();
 
     public void insertTicket(Scanner scanner){

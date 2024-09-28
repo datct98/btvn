@@ -6,7 +6,18 @@ import extend_lesson.manage_book.utils.Utils;
 
 import java.util.Scanner;
 
-public class BookService implements IActionCommon, IActionCommon2<Book> {
+public class BookService implements IActionCommon{
+    private static BookService bookService;
+    private BookService() {
+    }
+
+    public static synchronized BookService getInstance(){
+        if(bookService == null){
+            bookService = new BookService();
+        }
+        return bookService;
+    }
+
     public Book findById(int id){
         for (Book book: Database.books){
             if(book.getId() == id){
@@ -48,10 +59,7 @@ public class BookService implements IActionCommon, IActionCommon2<Book> {
         return book;
     }
 
-    @Override
-    public void insert(Book object) {
-        Database.books.add(object);
-    }
+
 
     @Override
     public void update(Scanner scanner, int id) {
